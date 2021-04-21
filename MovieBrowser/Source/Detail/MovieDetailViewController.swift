@@ -31,6 +31,8 @@ class MovieDetailViewController: UIViewController {
     }    
 }
 
+//MARK: - UIImageView
+
 extension UIImageView {
     func downloaded(from url: URL, contentMode mode: ContentMode = .scaleAspectFit) {
         contentMode = mode
