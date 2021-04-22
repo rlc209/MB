@@ -83,8 +83,10 @@ extension SearchViewController: SearchManagerDelegate {
             self.tableView.reloadData()
             
             // If user scrolled down the list, then searched for a new movie, this shows the top of the new list.
-            let indexPath = IndexPath(row: 0, section: 0)
-            self.tableView.scrollToRow(at: indexPath, at: .top, animated: true)
+            if !search.isEmpty {
+                let indexPath = IndexPath(row: 0, section: 0)
+                self.tableView.scrollToRow(at: indexPath, at: .top, animated: true)
+            }
         }
     }
     
